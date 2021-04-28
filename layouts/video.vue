@@ -2,20 +2,22 @@
   <div class="guli-player">
     <div class="head">
       <a href="#" title="谷粒学院">
-        <img class="logo" src="" lt="在线教育网站">
-    </a></div>
+        <img class="logo" src="" lt="在线教育网站" />
+      </a>
+    </div>
     <div class="body">
-      <div class="content"><nuxt/></div>
+      <div class="content"><nuxt /></div>
     </div>
   </div>
 </template>
 <script>
-export default {}
+export default {};
 </script>
 
 <style>
-html,body{
-  height:100%;
+html,
+body {
+  height: 100%;
 }
 </style>
 
@@ -28,7 +30,7 @@ html,body{
   width: 100%;
 }
 
-.head .logo{
+.head .logo {
   height: 50px;
   margin-left: 10px;
 }
