@@ -98,7 +98,6 @@ export default {
       limit: 5,
       data: {}, //课程列表
       subjectList: [], // 分类列表
-
       courseFrontQuery: {}, // 查询表单对象
     };
   },
