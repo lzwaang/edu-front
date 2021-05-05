@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'pku',
+    title: '2020郭老师团队',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -24,7 +24,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -40,7 +40,7 @@ module.exports = {
   plugins: [
     { src: '~/plugins/nuxt-swiper-plugin.js', ssr: false }
   ],
-  
+
   css: [
     'swiper/dist/css/swiper.css'
   ],
