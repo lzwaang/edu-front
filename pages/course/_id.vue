@@ -13,13 +13,16 @@
     <div class="video">
       <h2 class="title">{{ courseFrontInfo.title }}</h2>
       <p class="info">课程简介: {{ courseFrontInfo.description }}</p>
+      <!-- <h1>{{ this.id }}</h1> -->
       <div class="prism-player" id="J_prismPlayer"></div>
     </div>
 
     <div class="menu">
       <ul>
         <li v-for="video in this.videoList" :key="video.id">
-          <a :href="'/player/' + video.videoSourceId">{{ video.title }}</a>
+          <a :href="'/player/' + id + '/' + video.videoSourceId">{{
+            video.title
+          }}</a>
         </li>
       </ul>
     </div>
@@ -32,9 +35,11 @@ import vod from "@/api/vod";
 export default {
   asyncData({ params, error }) {
     return courseApi.getCourseInfo(params.id).then((response) => {
+      console.log(response.data.data.videoList);
       return {
         courseFrontInfo: response.data.data.courseFrontInfo,
         videoList: response.data.data.videoList,
+        id: params.id,
       };
     });
   },

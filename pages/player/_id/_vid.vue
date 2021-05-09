@@ -5,6 +5,7 @@
       rel="stylesheet"
       href="https://g.alicdn.com/de/prismplayer/2.8.1/skins/default/aliplayer-min.css"
     />
+
     <!-- 阿里云视频播放器脚本 -->
     <script
       charset="utf-8"
@@ -13,21 +14,47 @@
     />
 
     <!-- 定义播放器dom -->
-    <div id="J_prismPlayer" class="prism-player" />
+    <div class="vedio-container">
+      <div id="J_prismPlayer" class="prism-player" />
+      <div class="menu">
+        <ul>
+          <div v-for="video in this.videoList" :key="video.id">
+            <nuxt-link :to="'/player/' + id + '/' + video.videoSourceId">
+              <p class="list-items">{{ video.title }}</p>
+            </nuxt-link>
+          </div>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 import vod from "@/api/vod";
+import courseApi from "@/api/course";
 
 export default {
-  asyncData({ params, error }) {
-    return vod.getPlayAuth(params.vid).then((response) => {
-      return {
-        playAuth: response.data.data.playAuth,
-        vid: params.vid,
-      };
-    });
+  data() {
+    return {
+      videoList: [],
+    };
   },
+
+  // fix: get the course list in the vedio page
+  async asyncData({ params, error }) {
+    let [pav, list] = await Promise.all([
+      vod.getPlayAuth(params.vid),
+      courseApi.getCourseInfo(params.id),
+    ]);
+    // console.log(pav);
+    // console.log(list);
+    return {
+      id: params.id,
+      vid: params.vid,
+      playAuth: pav.data.data.playAuth,
+      videoList: list.data.data.videoList,
+    };
+  },
+
   mounted() {
     //页面渲染之后  created
     new Aliplayer(
@@ -57,3 +84,29 @@ export default {
   },
 };
 </script>
+
+<style>
+.list-items {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+}
+
+.list-items:hover {
+  text-decoration: none;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.menu {
+  background-color: #e9e9e9;
+  width: 30%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.vedio-container {
+  display: flex;
+}
+</style>
