@@ -49,18 +49,18 @@
                 </h2>
                 <br />
                 <el-row>
-                  <el-button
+                  <!-- <el-button
                     type="primary"
                     round
                     @click="location = '/course/' + item.id"
                     >课件学习</el-button
-                  >
+                  > -->
                   <router-link :to="'/course/' + item.id">
                     <el-button
                       type="primary"
                       round
                       @click="location = '/course/' + item.id"
-                      >视频学习</el-button
+                      >开始学习</el-button
                     >
                   </router-link>
                 </el-row>
@@ -118,7 +118,7 @@ export default {
     getCourseList(current = 1) {
       this.current = current;
       courseApi
-        .getCourseList(this.current, 8, this.courseFrontQuery)
+        .getCourseList(this.current, this.limit, this.courseFrontQuery)
         .then((response) => {
           this.data = response.data.data;
         });

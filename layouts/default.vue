@@ -8,13 +8,13 @@
             <router-link to="/" tag="li" active-class="current" exact>
               <a>首页</a>
             </router-link>
-            <!-- <router-link to="/" tag="li" active-class="current">
+            <router-link to="/test" tag="li" active-class="current">
               <a>讨论区</a>
             </router-link>
-            <router-link to="/" tag="li" active-class="current">
+            <!-- <router-link to="/" tag="li" active-class="current">
               <a>在线考试</a>
-            </router-link>
-            <router-link to="/" tag="li" active-class="current">
+            </router-link> -->
+            <!-- <router-link to="/" tag="li" active-class="current">
               <a>后台管理</a>
             </router-link> -->
           </ul>
