@@ -1,11 +1,5 @@
 <template>
   <div id="aCoursesList" class="bg-fa of">
-    <!-- <el-carousel indicator-position="outside">
-      <el-carousel-item v-for="item in 4" :key="item">
-        <h3>图片{{ item }}</h3>
-      </el-carousel-item>
-    </el-carousel> -->
-
     <!-- /课程列表 开始 -->
     <section class="container">
       <header class="comm-title">

@@ -11,55 +11,8 @@
             <router-link to="/test" tag="li" active-class="current">
               <a>讨论区</a>
             </router-link>
-            <!-- <router-link to="/" tag="li" active-class="current">
-              <a>在线考试</a>
-            </router-link> -->
-            <!-- <router-link to="/" tag="li" active-class="current">
-              <a>后台管理</a>
-            </router-link> -->
-          </ul>
-          <ul class="h-r-login">
-            <li id="no-login">
-              <a href="/" title="登录">
-                <em class="icon18 login-icon">&nbsp;</em>
-                <span class="vam ml5">登录</span>
-              </a>
-              |
-              <a href="/" title="注册">
-                <span class="vam ml5">注册</span>
-              </a>
-            </li>
-            <li class="mr10 undis" id="is-login-one">
-              <a href="#" title="消息" id="headerMsgCountId">
-                <em class="icon18 news-icon">&nbsp;</em>
-              </a>
-              <q class="red-point" style="display: none">&nbsp;</q>
-            </li>
-            <li class="h-r-user undis" id="is-login-two">
-              <a href="#" title>
-                <img
-                  src="~/assets/img/avatar-boy.gif"
-                  width="30"
-                  height="30"
-                  class="vam picImg"
-                  alt
-                />
-                <span class="vam disIb" id="userName"></span>
-              </a>
-              <a
-                href="javascript:void(0)"
-                title="退出"
-                onclick="exit();"
-                class="ml5"
-                >退出</a
-              >
-            </li>
           </ul>
         </div>
-        <aside class="mw-nav-btn">
-          <div class="mw-nav-icon"></div>
-        </aside>
-        <div class="clear"></div>
       </section>
     </header>
     <!-- /公共头引入 -->
@@ -95,10 +48,6 @@
   </div>
 </template>
 <script>
-import "~/assets/css/reset.css";
-import "~/assets/css/theme.css";
-import "~/assets/css/global.css";
-import "~/assets/css/web.css";
-
+import "../assets/css/main.css";
 export default {};
 </script>

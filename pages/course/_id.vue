@@ -18,13 +18,11 @@
     </div>
 
     <div class="menu">
-      <ul>
-        <li v-for="video in this.videoList" :key="video.id">
-          <a :href="'/player/' + id + '/' + video.videoSourceId">{{
-            video.title
-          }}</a>
-        </li>
-      </ul>
+      <div v-for="video in this.videoList" :key="video.id">
+        <nuxt-link :to="'/player/' + id + '/' + video.videoSourceId">
+          <p class="list-items">{{ video.title }}</p>
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -47,21 +45,11 @@ export default {
 </script>
 
 <style>
-.menu {
-  background-color: #e9e9e9;
-  float: right;
-  height: 500px;
-  padding: 10px;
-  border-radius: 5px;
-  width: 30%;
-  margin-top: 50px;
-}
 .video {
   background-color: #f5f5f5;
   width: 50%;
   height: 300px;
   margin-top: 52px;
-  margin-left: 30px;
   padding: 60px;
 }
 .video .info {

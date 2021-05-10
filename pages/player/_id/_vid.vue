@@ -17,13 +17,11 @@
     <div class="vedio-container">
       <div id="J_prismPlayer" class="prism-player" />
       <div class="menu">
-        <ul>
-          <div v-for="video in this.videoList" :key="video.id">
-            <nuxt-link :to="'/player/' + id + '/' + video.videoSourceId">
-              <p class="list-items">{{ video.title }}</p>
-            </nuxt-link>
-          </div>
-        </ul>
+        <div v-for="video in this.videoList" :key="video.id">
+          <nuxt-link :to="'/player/' + id + '/' + video.videoSourceId">
+            <p class="list-items">{{ video.title }}</p>
+          </nuxt-link>
+        </div>
       </div>
     </div>
   </div>
@@ -90,7 +88,7 @@ export default {
   text-decoration: none;
   padding: 10px;
   background-color: white;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .list-items:hover {
@@ -104,6 +102,7 @@ export default {
   width: 30%;
   text-align: center;
   font-size: 18px;
+  padding: 10px;
 }
 
 .vedio-container {
