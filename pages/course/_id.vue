@@ -11,7 +11,7 @@
     ></script>
 
     <div class="video">
-      <h2 class="title">{{ courseFrontInfo.title }}</h2>
+      <h2 class="title-course">{{ courseFrontInfo.title }}</h2>
       <p class="info">课程简介: {{ courseFrontInfo.description }}</p>
       <!-- <h1>{{ this.id }}</h1> -->
       <div class="prism-player" id="J_prismPlayer"></div>
@@ -48,8 +48,8 @@ export default {
 .video {
   background-color: #f5f5f5;
   width: 50%;
-  height: 300px;
-  margin-top: 52px;
+  height: 500px;
+  margin: 52px 0;
   padding: 60px;
 }
 .video .info {

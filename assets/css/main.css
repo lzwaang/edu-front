@@ -1,3 +1,61 @@
 li {
   list-style: none;
 }
+
+.items {
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  margin-left: 48px;
+}
+
+.items:hover {
+  color: wheat;
+}
+
+#header {
+  background: linear-gradient(90deg, #245182 16.94%, #253959 79.95%);
+  height: 180px;
+  display: flex;
+  align-items: center;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+
+.logo {
+  height: 100px;
+  margin-left: 78px;
+}
+
+.menu-items {
+  position: absolute;
+  right: 96px;
+}
+
+.title {
+  color: antiquewhite;
+  font-size: 24px;
+}
+
+#footer {
+  background: linear-gradient(184.01deg, #245182 15.97%, #253959 109.62%);
+  color: white;
+  text-align: center;
+  padding: 20px 0 80px 0;
+}
+
+.footer-as {
+  color: white;
+}
+
+.bg {
+  width: 90%;
+  margin-top: 48px;
+  border-radius: 24px;
+  border: 3px solid #253959;
+  box-shadow: 0px 0px 30px #253959;
+}

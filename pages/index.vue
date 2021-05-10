@@ -1,5 +1,6 @@
 <template>
   <div id="aCoursesList" class="bg-fa of">
+    <img class="bg" src="../assets//img/bg.jpg" />
     <!-- /课程列表 开始 -->
     <section class="container">
       <header class="comm-title">
@@ -39,16 +40,9 @@
               <el-card class="box-card" shadow="hover">
                 <h2 class="hLh30 txtOf mt10">
                   {{ item.title }}
-                  <!-- <el-tag> {{item.title}} </el-tag> -->
                 </h2>
                 <br />
                 <el-row>
-                  <!-- <el-button
-                    type="primary"
-                    round
-                    @click="location = '/course/' + item.id"
-                    >课件学习</el-button
-                  > -->
                   <router-link :to="'/course/' + item.id">
                     <el-button
                       type="primary"
@@ -62,7 +56,6 @@
               <div></div>
             </li>
           </ul>
-          <!-- <div class="clear"></div> -->
         </div>
 
         <!-- 分页 -->
@@ -80,6 +73,12 @@
       </section>
     </section>
     <!-- /课程列表 结束 -->
+    <div class="container-next">
+      <el-divider><i class="el-icon-date"></i></el-divider>
+      <el-calendar v-model="value"></el-calendar>
+      <h3>欢迎为我们打分:</h3>
+      <el-rate v-model="value"></el-rate>
+    </div>
   </div>
 </template>
 <script>
@@ -93,6 +92,7 @@ export default {
       data: {}, //课程列表
       subjectList: [], // 分类列表
       courseFrontQuery: {}, // 查询表单对象
+      // value: new Date(),
     };
   },
   created() {
@@ -132,9 +132,11 @@ export default {
 .active {
   background: #bdbdbd;
 }
+
 .hide {
   display: none;
 }
+
 .show {
   display: block;
 }
@@ -143,11 +145,33 @@ export default {
   font-size: 14px;
 }
 
+.container-next {
+  width: 74%;
+  margin: 0 auto;
+}
+
 .item {
   padding: 18px 0;
 }
 
 .box-card {
-  width: 480px;
+  width: 64%;
+  margin: 24px auto;
+  border: 1px solid #26364a;
+}
+
+.box-card:hover {
+  color: white;
+  filter: drop-shadow(0px 0px 24px rgb(80, 80, 80));
+  background: linear-gradient(265.65deg, #47add6 13.4%, #254e97 86.23%);
+}
+
+#aCoursesList {
+  text-align: center;
+  padding: 0 0 100px 0;
+  background-color: rgb(241, 241, 241);
+  width: 90%;
+  margin: 48px auto;
+  border-radius: 10px;
 }
 </style>

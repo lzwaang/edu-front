@@ -62,7 +62,7 @@ export default {
         playauth: this.playAuth, // 播放凭证
         encryptType: "1", // 如果播放加密视频，则需设置encryptType=1，非加密视频无需设置此项
         width: "100%",
-        height: "500px",
+        height: "700px",
         // 以下可选设置
         //cover: '', // 封面
         qualitySort: "asc", // 清晰度排序
@@ -107,5 +107,6 @@ export default {
 
 .vedio-container {
   display: flex;
+  margin: 36px;
 }
 </style>
