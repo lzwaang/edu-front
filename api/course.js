@@ -23,5 +23,4 @@ export default {
       method: 'get'
     })
   }
-
 }

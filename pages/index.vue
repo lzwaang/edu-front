@@ -73,12 +73,6 @@
       </section>
     </section>
     <!-- /课程列表 结束 -->
-    <div class="container-next">
-      <el-divider><i class="el-icon-date"></i></el-divider>
-      <el-calendar v-model="value"></el-calendar>
-      <h3>欢迎为我们打分:</h3>
-      <el-rate v-model="value"></el-rate>
-    </div>
   </div>
 </template>
 <script>
@@ -155,15 +149,15 @@ export default {
 }
 
 .box-card {
-  width: 64%;
+  width: 48%;
   margin: 24px auto;
-  border: 1px solid #26364a;
+  height: 180px;
+  background-color: white;
 }
 
 .box-card:hover {
   color: white;
-  filter: drop-shadow(0px 0px 24px rgb(80, 80, 80));
-  background: linear-gradient(265.65deg, #47add6 13.4%, #254e97 86.23%);
+  background: linear-gradient(315.63deg, #02A5F4 3.96%, #04B2EE 42.99%, #06C1E6 71.92%, #08CBE1 90.32%);
 }
 
 #aCoursesList {

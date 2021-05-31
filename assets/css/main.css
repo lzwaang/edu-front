@@ -3,7 +3,7 @@ li {
 }
 
 .items {
-  font-size: 22px;
+  font-size: 16px;
   color: white;
   text-decoration: none;
   margin-left: 48px;
@@ -15,7 +15,7 @@ li {
 
 #header {
   background: linear-gradient(90deg, #245182 16.94%, #253959 79.95%);
-  height: 180px;
+  height: 36px;
   display: flex;
   align-items: center;
 }
@@ -27,7 +27,7 @@ body, html {
 }
 
 .logo {
-  height: 100px;
+  height: 30px;
   margin-left: 78px;
 }
 
@@ -38,7 +38,8 @@ body, html {
 
 .title {
   color: antiquewhite;
-  font-size: 24px;
+  font-size: 18px;
+  margin-left: 12px;
 }
 
 #footer {
@@ -53,9 +54,7 @@ body, html {
 }
 
 .bg {
-  width: 90%;
+  width: 72%;
   margin-top: 48px;
-  border-radius: 24px;
-  border: 3px solid #253959;
-  box-shadow: 0px 0px 30px #253959;
+  border-radius: 4px;
 }
