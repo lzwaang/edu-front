@@ -151,7 +151,6 @@ export default {
 .box-card {
   width: 48%;
   margin: 24px auto;
-  height: 180px;
   background-color: white;
 }
 
@@ -163,9 +162,8 @@ export default {
 #aCoursesList {
   text-align: center;
   padding: 0 0 100px 0;
-  background-color: rgb(241, 241, 241);
+  background-color: #F4F7FE;
   width: 90%;
-  margin: 48px auto;
-  border-radius: 10px;
+  margin: 24px auto 64px auto;
 }
 </style>

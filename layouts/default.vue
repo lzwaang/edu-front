@@ -13,13 +13,13 @@
     <!-- /公共头引入 -->
     <nuxt />
     <!-- 公共底引入 -->
-    <header id="header">
-      <img class="logo" src="../assets/img/course.png" />
-      <p class="title">2020 郭老师团队线上教育平台</p>
-      <div class="menu-items">
+    <footer class="footer">
+      <img class="logo-footer" src="../assets/img/course.png" />
+      <p class="title-footer">2020 郭老师团队线上教育平台</p>
+      <div class="menu-items-footer">
         <a href="/" class="items">© 冀ICP备2021002767号</a>
       </div>
-    </header>
+    </footer>
     <!-- /公共底引入 -->
   </div>
 </template>

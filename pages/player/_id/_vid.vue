@@ -88,7 +88,9 @@ export default {
   text-decoration: none;
   padding: 10px;
   background-color: white;
+  color: #000;
   margin: 10px 0;
+  display: block;
 }
 
 .list-items:hover {
@@ -98,11 +100,13 @@ export default {
 }
 
 .menu {
-  background-color: #e9e9e9;
-  width: 30%;
+  background-color: #a8dadc;
+  width: 80%;
   text-align: center;
   font-size: 18px;
   padding: 10px;
+  margin: 24px;
+  border-radius: 10px;
 }
 
 .vedio-container {
