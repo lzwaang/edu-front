@@ -17,13 +17,11 @@
     <div class="vedio-container">
       <div id="J_prismPlayer" class="prism-player" />
       <div class="menu">
-        <ul>
-          <div v-for="video in this.videoList" :key="video.id">
-            <nuxt-link :to="'/player/' + id + '/' + video.videoSourceId">
-              <p class="list-items">{{ video.title }}</p>
-            </nuxt-link>
-          </div>
-        </ul>
+        <div v-for="video in this.videoList" :key="video.id">
+          <nuxt-link :to="'/player/' + id + '/' + video.videoSourceId">
+            <p class="list-items">{{ video.title }}</p>
+          </nuxt-link>
+        </div>
       </div>
     </div>
   </div>
@@ -64,7 +62,7 @@ export default {
         playauth: this.playAuth, // 播放凭证
         encryptType: "1", // 如果播放加密视频，则需设置encryptType=1，非加密视频无需设置此项
         width: "100%",
-        height: "500px",
+        height: "700px",
         // 以下可选设置
         //cover: '', // 封面
         qualitySort: "asc", // 清晰度排序
@@ -90,7 +88,9 @@ export default {
   text-decoration: none;
   padding: 10px;
   background-color: white;
-  margin: 10px;
+  color: #000;
+  margin: 10px 0;
+  display: block;
 }
 
 .list-items:hover {
@@ -100,13 +100,17 @@ export default {
 }
 
 .menu {
-  background-color: #e9e9e9;
-  width: 30%;
+  background-color: #a8dadc;
+  width: 80%;
   text-align: center;
   font-size: 18px;
+  padding: 10px;
+  margin: 24px;
+  border-radius: 10px;
 }
 
 .vedio-container {
   display: flex;
+  margin: 36px;
 }
 </style>

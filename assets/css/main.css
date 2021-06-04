@@ -1,0 +1,79 @@
+li {
+  list-style: none;
+}
+
+.items {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  margin-left: 48px;
+}
+
+.items:hover {
+  color: wheat;
+}
+
+#header {
+  background: linear-gradient(90deg, #245182 16.94%, #253959 79.95%);
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  height: 28px;
+  margin-left: 78px;
+}
+
+.logo-footer {
+  height: 22px;
+  margin-left: 78px;
+}
+
+.menu-items {
+  position: absolute;
+  right: 96px;
+}
+
+.menu-items-footer {
+  position: absolute;
+  right: 96px;
+}
+
+.menu-items-footer a {
+  color: rgb(148, 148, 148);
+}
+
+.title {
+  color: white;
+  font-size: 18px;
+  margin-left: 12px;
+}
+
+.title-footer {
+  color: rgb(148, 148, 148);
+  font-size: 16px;
+  margin-left: 12px;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  background: rgb(223, 223, 223);
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.bg {
+  width: 72%;
+  margin-top: 48px;
+  border-radius: 4px;
+}

@@ -1,11 +1,6 @@
 <template>
   <div id="aCoursesList" class="bg-fa of">
-    <!-- <el-carousel indicator-position="outside">
-      <el-carousel-item v-for="item in 4" :key="item">
-        <h3>图片{{ item }}</h3>
-      </el-carousel-item>
-    </el-carousel> -->
-
+    <img class="bg" src="../assets//img/bg.jpg" />
     <!-- /课程列表 开始 -->
     <section class="container">
       <header class="comm-title">
@@ -45,16 +40,9 @@
               <el-card class="box-card" shadow="hover">
                 <h2 class="hLh30 txtOf mt10">
                   {{ item.title }}
-                  <!-- <el-tag> {{item.title}} </el-tag> -->
                 </h2>
                 <br />
                 <el-row>
-                  <!-- <el-button
-                    type="primary"
-                    round
-                    @click="location = '/course/' + item.id"
-                    >课件学习</el-button
-                  > -->
                   <router-link :to="'/course/' + item.id">
                     <el-button
                       type="primary"
@@ -68,7 +56,6 @@
               <div></div>
             </li>
           </ul>
-          <!-- <div class="clear"></div> -->
         </div>
 
         <!-- 分页 -->
@@ -99,6 +86,7 @@ export default {
       data: {}, //课程列表
       subjectList: [], // 分类列表
       courseFrontQuery: {}, // 查询表单对象
+      // value: new Date(),
     };
   },
   created() {
@@ -138,9 +126,11 @@ export default {
 .active {
   background: #bdbdbd;
 }
+
 .hide {
   display: none;
 }
+
 .show {
   display: block;
 }
@@ -149,11 +139,31 @@ export default {
   font-size: 14px;
 }
 
+.container-next {
+  width: 74%;
+  margin: 0 auto;
+}
+
 .item {
   padding: 18px 0;
 }
 
 .box-card {
-  width: 480px;
+  width: 48%;
+  margin: 24px auto;
+  background-color: white;
+}
+
+.box-card:hover {
+  color: white;
+  background: linear-gradient(315.63deg, #02A5F4 3.96%, #04B2EE 42.99%, #06C1E6 71.92%, #08CBE1 90.32%);
+}
+
+#aCoursesList {
+  text-align: center;
+  padding: 0 0 100px 0;
+  background-color: #F4F7FE;
+  width: 90%;
+  margin: 24px auto 64px auto;
 }
 </style>
