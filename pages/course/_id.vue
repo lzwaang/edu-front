@@ -18,10 +18,16 @@
     <div class="box-next">
       <div class="menu">
         <h3>pdf列表</h3>
-        <a href="http://8.140.10.109:8080/home/edu/static/upload/1.pdf" target="blank" class="list-items">1</a>
-        <a href="http://8.140.10.109:8080/home/edu/static/upload/2.pdf" target="blank" class="list-items">2</a>
+        <nuxt-link to= 'pdf/pdf1' target="blank" class="list-items">1</nuxt-link>
+        
+        <nuxt-link to= 'pdf/pdf1' target="blank" class="list-items">2</nuxt-link>
+        <nuxt-link to= 'pdf/pdf1' target="blank" class="list-items">3</nuxt-link>
+
+        <nuxt-link to= 'pdf/pdf1' target="blank" class="list-items">4</nuxt-link>
+
+        <!--<a href="http://8.140.10.109:8080/home/edu/static/upload/2.pdf" target="blank" class="list-items">2</a>
         <a href="http://8.140.10.109:8080/home/edu/static/upload/3.pdf" target="blank" class="list-items">3</a>
-        <a href="http://8.140.10.109:8080/home/edu/static/upload/4.pdf" target="blank" class="list-items">4</a>
+        <a href="http://8.140.10.109:8080/home/edu/static/upload/4.pdf" target="blank" class="list-items">4</a>-->
       </div>
       <div class="menu">
         <h3>视频列表</h3>
